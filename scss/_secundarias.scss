@@ -1,0 +1,211 @@
+/* Páginas secundaria - NOSOTROS, EQUIPO y NOTAS*/
+
+.cardHorizontal {
+    width: 100%;
+    box-shadow: 2px 2px 10px 1px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin-bottom: 24px;
+    align-items: flex-end;
+
+    p {
+        margin: 0px 0px 16px 24px;
+        text-align: justify;
+    }
+}
+
+.imgExtra {
+    max-width: 100%;
+    height: auto;
+    margin: auto 0px;
+}
+
+.contenido {
+    width: 80%;
+}
+
+.justificado {
+    text-align: justify;
+}
+
+.bloque {
+    padding-bottom: 32px;
+}
+
+.textoGris {
+    color: $color_texto-claro;
+}
+
+.textoDestacado {
+    font-size: 24px;
+}
+
+.btnContactar {
+    margin: 0px auto;
+}
+
+.boxBlanco {
+    margin-bottom: 52px;
+}
+
+.whatsappIcon {
+    height: 22px;
+    margin: 0px 18px;
+}
+
+.botonera {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    grid-area: botonera;
+}
+
+.btnCard {
+    font-size: 14px;
+    line-height: 20px;
+    padding: 7px 20px;
+    margin: 16px 0px 32px 24px;
+}
+
+.btnWA {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin: 16px 0px 32px 24px;
+}
+
+.cardInfo {
+    width: 100%;
+    margin-bottom: 32px;
+
+    display: grid;
+    grid-template-areas:
+        "subtitulo fotoProf"
+        "titulo fotoProf"
+        "botonera fotoProf"
+        "infoProf fotoProf";
+    grid-template-columns: 75% 25%;
+    align-items: end;
+
+    h4 {
+        grid-area: subtitulo;
+    }
+
+    h3 {
+        grid-area: titulo;
+    }
+
+    ul {
+        margin-left: 24px;
+    }
+}
+
+.infoProfUno,
+.infoProfDos {
+    grid-area: infoProf;
+}
+.cardFotoProf {
+    grid-area: fotoProf;
+
+    img {
+        width: 110%;
+    }
+}
+
+.turnoTres,
+.turnoCuatro, 
+.infoProfTres, 
+.infoProfCuatro, 
+.fotoTres, 
+.fotoCuatro {
+    display: none;
+}
+
+.cardInfoNota {
+    width: 100%;
+    margin-bottom: 32px;
+
+    display: grid;
+    grid-template-areas:
+        "subtitulo fotoNota"
+        "titulo fotoNota"
+        "infoNota fotoNota"
+        "botonera fotoNota";
+    grid-template-columns: 62% 38%;
+    align-items: end;
+
+    h3 {
+        grid-area: subtitulo;
+    }
+
+    h2 {
+        grid-area: titulo;
+    }
+
+    ul {
+        margin-left: 24px;
+    }
+}
+
+.cardFotoNota {
+    grid-area: fotoNota;
+    img {
+        width: 100%;
+        border-end-end-radius: 10px;
+    }
+}
+
+.infoNotaUno, .infoNotaDos, .infoNotaTres {
+    grid-area: infoNota;
+}
+
+/* Página secundaria - CONTACTO */
+
+.formContacto {
+    width: 68%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.boxInput {
+    display: flex;
+    flex-direction: column;
+}
+
+.datos {
+    display: grid;
+    grid-template-areas:
+        "especialista nombre"
+        "email telefono";
+    grid-template-columns: 42% 42%;
+    grid-column-gap: 16%;
+    padding-right: 0;
+}
+
+input {
+    @include formulario;
+}
+
+textarea {
+    @include formulario;
+    resize: none;
+}
+
+select {
+    @include formulario;
+    padding: 7px 14px;
+    width: 100%;
+}
+
+label {
+    margin-bottom: 8px;
+    margin-top: 40px;
+    font-weight: 600;
+}
+
+.btnSend {
+    margin: 32px auto;
+    font-size: 24px;
+    width: 240px;
+}

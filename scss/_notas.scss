@@ -1,0 +1,33 @@
+/* NOTAS - Sección 4 Home */
+.titleSection {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.notas {
+    display: grid;
+    grid-template-areas: "titleNotas enlaceNotas" "cardNotas cardNotas";
+    grid-template-columns: 85% 15%;
+    align-items: baseline;
+}
+
+.titleNotas {
+    grid-area: titleNotas;
+}
+
+.enlaceNotas {
+    grid-area: enlaceNotas;
+
+    a {
+        font-size: 16px;
+        line-height: 20px;
+        color: $color_link;
+        text-align: right;
+    }
+}
+
+.cardNotas {
+    grid-area: cardNotas;
+}

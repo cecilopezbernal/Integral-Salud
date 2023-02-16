@@ -1,0 +1,59 @@
+/* Títulos y subtítulos */
+
+h1,
+h2,
+h3,
+h4.footer,
+h5 {
+    font-weight: 600;
+}
+
+h1.index {
+    font-size: 48px;
+    color: #8F8D92;
+    margin: 30px auto 0px;
+}
+
+h2 {
+    font-size: 40px;
+    margin-top: 24px;
+    margin-bottom: 12px;
+}
+
+h3,
+h2.notas {
+    font-size: 24px;
+    margin: 8px auto 8px 24px;
+}
+
+h4:not(.footer),
+h3.notas {
+    font-weight: 500;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #8F8D92;
+    margin: 24px auto 0px 24px;
+}
+
+h5,
+h4.footer,
+h3.footer {
+    font-size: 20px;
+    text-align: left;
+    margin: 16px 0px 8px 0px;
+}
+
+h1.secundario {
+    font-weight: 600;
+    font-size: 40px;
+    width: 80%;
+    margin: 30px auto 8px;
+}
+
+h2.pagTerciaria {
+    margin: 8px auto;
+}
+
+h3.pagTerciaria {
+    margin: 24px auto 0px;
+}
