@@ -625,19 +625,6 @@ label {
 }
 
 /* Página terciaria - NOTA INDIVIDUAL */
-.fotoNotaUnoDer {
-  max-width: 45%;
-  height: 100%;
-  margin-left: 5%;
-}
-
-.fotoNotaUnoIzq {
-  max-width: 40%;
-  height: 100%;
-  margin-right: 5%;
-  margin-bottom: 50px;
-}
-
 .fondoBlanco p {
   line-height: 24px;
 }
