@@ -773,6 +773,10 @@ label {
   .datos {
     grid-template-columns: 100%;
   }
+  .whatsappIcon {
+    height: 20px;
+    margin: 0px;
+  }
 }
 @media (max-width: 575px) {
   .introContacto {
@@ -829,10 +833,6 @@ label {
   }
   .btnWA {
     margin: 16px 2% 32px 2%;
-  }
-  .whatsappIcon {
-    height: 20px;
-    margin: 0px;
   }
 }
 
