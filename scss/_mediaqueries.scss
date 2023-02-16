@@ -177,6 +177,10 @@
     .datos {
         grid-template-columns: 100%;
     }
+
+    .btnWA {
+        margin: 16px 2% 32px 2%;
+    }
 }
 
 @media (max-width:575px) {
@@ -251,9 +255,7 @@
         margin: 16px 0px 32px 2%;
     }
 
-    .btnWA {
-        margin: 16px 2% 32px 2%;
-    }
+
 
     .whatsappIcon {
         height: 20px;
