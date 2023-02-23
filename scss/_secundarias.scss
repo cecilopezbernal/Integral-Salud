@@ -100,7 +100,9 @@
 }
 
 .infoProfUno,
-.infoProfDos {
+.infoProfDos,
+.infoProfTres,
+.infoProfCuatro {
     grid-area: infoProf;
 }
 .cardFotoProf {
@@ -109,15 +111,6 @@
     img {
         width: 110%;
     }
-}
-
-.turnoTres,
-.turnoCuatro, 
-.infoProfTres, 
-.infoProfCuatro, 
-.fotoTres, 
-.fotoCuatro {
-    display: none;
 }
 
 .cardInfoNota {

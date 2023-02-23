@@ -136,7 +136,7 @@ h2.notas {
   margin: 8px auto 8px 24px;
 }
 
-h4:not(.footer),
+h4:not(.footer, .listValues),
 h3.notas {
   font-weight: 500;
   font-size: 12px;
@@ -166,6 +166,12 @@ h2.pagTerciaria {
 
 h3.pagTerciaria {
   margin: 24px auto 0px;
+}
+
+h4.listValues {
+  font-weight: 500;
+  font-size: 18px;
+  text-transform: uppercase;
 }
 
 /* Botones */
@@ -509,7 +515,9 @@ footer {
 }
 
 .infoProfUno,
-.infoProfDos {
+.infoProfDos,
+.infoProfTres,
+.infoProfCuatro {
   grid-area: infoProf;
 }
 
@@ -518,15 +526,6 @@ footer {
 }
 .cardFotoProf img {
   width: 110%;
-}
-
-.turnoTres,
-.turnoCuatro,
-.infoProfTres,
-.infoProfCuatro,
-.fotoTres,
-.fotoCuatro {
-  display: none;
 }
 
 .cardInfoNota {
