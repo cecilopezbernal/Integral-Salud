@@ -1,16 +1,20 @@
 /* Páginas secundaria - NOSOTROS, EQUIPO y NOTAS*/
 
 .cardHorizontal {
-    width: 100%;
+    width: 80%;
     box-shadow: 2px 2px 10px 1px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
-    margin-bottom: 24px;
+    margin: 0 auto 24px;
     align-items: flex-end;
 
     p {
         margin: 0px 0px 16px 24px;
         text-align: justify;
     }
+}
+
+.textoDestacado {
+    margin: 24px 10% 12px;
 }
 
 .imgExtra {
@@ -201,4 +205,8 @@ label {
     margin: 32px auto;
     font-size: 24px;
     width: 240px;
+}
+
+.lista {
+    margin-left: 2% ;
 }

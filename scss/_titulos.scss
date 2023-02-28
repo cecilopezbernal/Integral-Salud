@@ -20,14 +20,23 @@ h2 {
     margin-bottom: 12px;
 }
 
+h4.subtituloNotas{
+    font-size: 20px;
+    margin-top: 24px;
+}
+
 h3,
-h2.notas {
+h2.notasTitulo {
     font-size: 24px;
     margin: 8px auto 8px 24px;
 }
 
-h4:not(.footer,.listValues),
-h3.notas {
+// h2.notasTitulo {
+//     margin-bottom: 24px;
+// }
+
+h4:not(.footer,.tituloSecundario,.subtituloNotas),
+h3.notasSubtitulo {
     font-weight: 500;
     font-size: 12px;
     text-transform: uppercase;
@@ -44,7 +53,7 @@ h3.footer {
 }
 
 h1.secundario {
-    font-weight: 600;
+    // font-weight: 600;
     font-size: 40px;
     width: 80%;
     margin: 30px auto 8px;
@@ -58,9 +67,8 @@ h3.pagTerciaria {
     margin: 24px auto 0px;
 }
 
-h4.listValues {
+h4.tituloSecundario {
     font-weight: 500;
     font-size: 18px;
     text-transform: uppercase;
-    
 }

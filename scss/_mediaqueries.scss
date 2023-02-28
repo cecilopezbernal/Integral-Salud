@@ -109,8 +109,9 @@
             "fotoProf";
         grid-template-columns: 100%;
         text-align: center;
-      
-        p, ul {
+
+        p,
+        ul {
             text-align: justify;
             margin-right: 24px;
         }
@@ -118,6 +119,10 @@
         img {
             width: 80%;
         }
+    }
+
+    .cardHorizontal {
+        width: 90%;
     }
 
     .cardInfoNota {
@@ -129,7 +134,7 @@
             "fotoNota"
             "botonera";
         grid-template-columns: 100%;
-    
+
         p {
             margin-right: 24px;
         }
@@ -190,7 +195,7 @@
         line-height: 30px;
     }
 
-    h1.index, 
+    h1.index,
     h2,
     h1.secundario {
         font-size: 30px;
@@ -244,7 +249,7 @@
         top: 60px;
         padding-bottom: 12px;
     }
-    
+
     .botonera {
         justify-content: space-around;
     }
