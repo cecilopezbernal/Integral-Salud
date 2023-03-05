@@ -808,7 +808,7 @@ label {
   .title-location {
     margin-left: 10%;
   }
-  .tituloSecundario, .section-us h3 {
+  .tituloSecundario, .section-us h3, .subtituloNotas {
     margin: 4% auto 0 5%;
   }
   .pagTerciaria .lista {
