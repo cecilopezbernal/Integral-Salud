@@ -808,6 +808,12 @@ label {
   .title-location {
     margin-left: 10%;
   }
+  .tituloSecundario, .section-us h3 {
+    margin: 4% auto 0 5%;
+  }
+  .pagTerciaria .lista {
+    margin-top: 3%;
+  }
   .section-team h2 {
     margin-bottom: 24px;
   }
