@@ -701,7 +701,8 @@ label {
     display: grid;
     grid-template-areas: "direccion" "mapa" "btnMapa";
     grid-template-rows: auto;
-    grid-template-columns: 100%;
+    grid-template-columns: 90%;
+    justify-content: center;
   }
   .direccion p {
     margin: 2% 0%;
@@ -798,9 +799,12 @@ label {
   .container_white {
     padding: 16px 0 32px;
   }
-  .container_white h2, .container_white p {
+  .container_white h2:not(.title-location), .container_white p {
     margin: 3% 5% 1%;
     width: 90%;
+  }
+  .title-location {
+    margin-left: 10%;
   }
   .section-team h2 {
     margin-bottom: 24px;
