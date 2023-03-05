@@ -1,28 +1,36 @@
 /* SECCIÓN 1 - Intro */
 
-.intro {
+.box-intro {
     align-items: center;
-}
 
-.darkText {
-    color: $color_fuente_principal;
-}
-
-.introContacto {
-    font-weight: 600;
-    font-size: 36px;
-    color: $color_texto-claro;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    line-height: 50px;
-
-    p {
-        margin: 0%;
-        padding-bottom: 52px;
+    div{
+        font-weight: 600;
+        font-size: 36px;
+        color: $color_texto-claro;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        line-height: 50px;
+    
+        p {
+            margin: 0%;
+            padding-bottom: 52px;
+        }
     }
 }
 
-.imgIntro {
-    margin-top: -20px;
+.section-intro{
+    span {
+        color: $color_fuente_principal;
+    }
+
+    img {
+        margin-top: -20px;
+    }
+
+    h1 {
+        font-size: 48px;
+        color: $color_texto-claro;
+        margin: 30px auto 0px;
+    }
 }

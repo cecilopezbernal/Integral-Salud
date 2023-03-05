@@ -1,12 +1,5 @@
 /* NOTAS - Sección 4 Home */
 
-.titleSection {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: baseline;
-}
-
 .notas {
     display: grid;
     grid-template-areas: "titleNotas enlaceNotas" "cardNotas cardNotas";
@@ -20,13 +13,11 @@
 
 .enlaceNotas {
     grid-area: enlaceNotas;
+    font-size: 16px;
+    line-height: 20px;
+    color: $color_link;
+    text-align: right;
 
-    a {
-        font-size: 16px;
-        line-height: 20px;
-        color: $color_link;
-        text-align: right;
-    }
 }
 
 .cardNotas {

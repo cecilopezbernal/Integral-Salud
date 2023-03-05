@@ -8,3 +8,11 @@
     border-radius: 5px;
     padding: 8px 16px;
 }
+
+@mixin subtitulo_gris-uppercase {
+    font-weight: 500;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #8F8D92;
+    margin: 24px auto 0px 24px;
+}

@@ -33,16 +33,15 @@ main {
   overflow-x: hidden;
 }
 
-.fondoGris {
+.container_grey {
   margin: 0 10%;
   padding-top: 16px;
 }
 
-.fondoBlanco {
+.container_white {
   background-color: #FFFFFF;
   box-shadow: 2px 2px 10px 1px rgba(0, 0, 0, 0.1);
-  padding-top: 16px;
-  padding-bottom: 32px;
+  padding: 16px 10% 32px;
 }
 
 /* HEADER */
@@ -59,24 +58,6 @@ nav {
   background: #F5F5F5;
   z-index: 10;
 }
-
-a {
-  text-decoration: none;
-  color: #1F1F1F;
-}
-
-nav ul a:hover {
-  padding-bottom: calc(var(--bs-nav-link-padding-x) - 2px);
-  border-bottom: #1F1F1F solid 2px;
-  transition: all 0.1s ease;
-}
-
-nav li {
-  list-style-type: none;
-  font-style: normal;
-  font-size: 16px;
-}
-
 nav ul {
   margin: 0;
   padding: 0;
@@ -84,8 +65,23 @@ nav ul {
   justify-content: space-around;
   width: 57%;
 }
+nav ul a:hover {
+  padding-bottom: calc(var(--bs-nav-link-padding-x) - 2px);
+  border-bottom: #1F1F1F solid 2px;
+  transition: all 0.1s ease;
+}
+nav li {
+  list-style-type: none;
+  font-style: normal;
+  font-size: 16px;
+}
 
-.contactoHeader {
+a {
+  text-decoration: none;
+  color: #1F1F1F;
+}
+
+.navbar__button-contact {
   text-transform: uppercase;
   display: flex;
   padding: 8px 32px 8px 18px;
@@ -95,14 +91,13 @@ nav ul {
   flex-direction: row;
   transition: all 0.3s ease;
 }
-
-.phoneHeader-white {
-  height: 18px;
-  margin: auto 8px;
+.navbar__button-contact:hover {
+  background-color: #5A5A5A;
 }
 
-.contactoHeader:hover {
-  background-color: #5A5A5A;
+.icon-phone_white {
+  height: 18px;
+  margin: auto 8px;
 }
 
 .navbar-toggler {
@@ -113,15 +108,14 @@ nav ul {
 h1,
 h2,
 h3,
-h4.footer,
 h5 {
   font-weight: 600;
 }
 
-h1.index {
-  font-size: 48px;
-  color: #8F8D92;
-  margin: 30px auto 0px;
+h1.title-sec {
+  font-size: 40px;
+  width: 80%;
+  margin: 30px auto 8px;
 }
 
 h2 {
@@ -130,19 +124,22 @@ h2 {
   margin-bottom: 12px;
 }
 
+h2.pagTerciaria {
+  margin: 8px auto;
+}
+
 h4.subtituloNotas {
   font-size: 20px;
   margin-top: 24px;
 }
 
 h3,
-h2.notasTitulo {
+.notasTitulo {
   font-size: 24px;
   margin: 8px auto 8px 24px;
 }
 
-h4:not(.footer, .tituloSecundario, .subtituloNotas),
-h3.notasSubtitulo {
+.card h4, .cardInfo h4 {
   font-weight: 500;
   font-size: 12px;
   text-transform: uppercase;
@@ -150,22 +147,12 @@ h3.notasSubtitulo {
   margin: 24px auto 0px 24px;
 }
 
-h5,
-h4.footer,
-h3.footer {
-  font-size: 20px;
-  text-align: left;
-  margin: 16px 0px 8px 0px;
-}
-
-h1.secundario {
-  font-size: 40px;
-  width: 80%;
-  margin: 30px auto 8px;
-}
-
-h2.pagTerciaria {
-  margin: 8px auto;
+.notasSubtitulo {
+  font-weight: 500;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #8F8D92;
+  margin: 24px auto 0px 24px;
 }
 
 h3.pagTerciaria {
@@ -176,6 +163,13 @@ h4.tituloSecundario {
   font-weight: 500;
   font-size: 18px;
   text-transform: uppercase;
+}
+
+.box-footer h3, .box-footer h4, .box-footer h5 {
+  font-weight: 600;
+  font-size: 20px;
+  text-align: left;
+  margin: 16px 0px 8px 0px;
 }
 
 /* Botones */
@@ -189,14 +183,18 @@ h4.tituloSecundario {
   display: block;
   transition: all 0.3s ease;
 }
+.btn:hover {
+  background-color: #417139;
+  color: #FFFFFF;
+}
 
-.btnBig {
+.btn_big {
   font-size: 22px;
   line-height: 40px;
   width: 240px;
 }
 
-.btnLittle {
+.btn_little {
   position: absolute;
   right: 24px;
   bottom: 16px;
@@ -205,21 +203,11 @@ h4.tituloSecundario {
   width: 150px;
 }
 
-.btn:hover {
-  background-color: #417139;
-  color: #FFFFFF;
-}
-
 /* SECCIÓN 1 - Intro */
-.intro {
+.box-intro {
   align-items: center;
 }
-
-.darkText {
-  color: #1D1D1F;
-}
-
-.introContacto {
+.box-intro div {
   font-weight: 600;
   font-size: 36px;
   color: #8F8D92;
@@ -228,17 +216,25 @@ h4.tituloSecundario {
   justify-content: center;
   line-height: 50px;
 }
-.introContacto p {
+.box-intro div p {
   margin: 0%;
   padding-bottom: 52px;
 }
 
-.imgIntro {
+.section-intro span {
+  color: #1D1D1F;
+}
+.section-intro img {
   margin-top: -20px;
+}
+.section-intro h1 {
+  font-size: 48px;
+  color: #8F8D92;
+  margin: 30px auto 0px;
 }
 
 /* TARJETAS NOTAS Y PROFESIONALES */
-.contenedorCard {
+.container-cards {
   display: flex;
   width: 100%;
   margin: 16px auto 48px;
@@ -248,9 +244,7 @@ h4.tituloSecundario {
   scrollbar-width: none;
   align-items: flex-start;
   padding-right: 20px;
-}
-.contenedorCard::-webkit-scrollbar {
-  width: 0;
+  padding-bottom: 5px;
 }
 
 .card {
@@ -267,8 +261,7 @@ h4.tituloSecundario {
 .card p {
   margin: 0px 24px auto 24px;
 }
-
-.cardFoto img {
+.card img {
   position: absolute;
   bottom: 0px;
   width: 296px;
@@ -276,25 +269,26 @@ h4.tituloSecundario {
   border-bottom-right-radius: 10px;
 }
 
-/* UBICACIÓN - Sección 3 Home */
-.contenedorBlanco {
-  margin: 0 10%;
+/* Secciones HOME */
+.home-section h2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+  grid-area: titleNotas;
 }
 
-.contenedorMapa {
+/* UBICACIÓN - Sección 3 Home */
+.box-map {
   display: grid;
   grid-template-areas: "mapa direccion" "mapa btnMapa";
   grid-template-rows: 50% 50%;
   grid-template-columns: 50% 45%;
   grid-column-gap: 5%;
 }
-
-.responsive-iframe {
+.box-map iframe {
   width: 100%;
   height: 440px;
-}
-
-.mapa {
   grid-area: mapa;
 }
 
@@ -309,19 +303,19 @@ h4.tituloSecundario {
   margin: 4% 0%;
   font-size: 24px;
 }
+.direccion img {
+  height: 24px;
+  margin-right: 10px;
+}
 
 .bold {
   font-weight: 600;
 }
 
-.location-icon {
-  height: 24px;
-  margin-right: 10px;
-}
-
-.btnMapa {
+.btn-mapa {
   margin: 57px auto;
   grid-area: btnMapa;
+  max-height: 52px;
 }
 
 .ancla {
@@ -330,13 +324,6 @@ h4.tituloSecundario {
 }
 
 /* NOTAS - Sección 4 Home */
-.titleSection {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: baseline;
-}
-
 .notas {
   display: grid;
   grid-template-areas: "titleNotas enlaceNotas" "cardNotas cardNotas";
@@ -344,21 +331,15 @@ h4.tituloSecundario {
   align-items: baseline;
 }
 
-.titleNotas {
-  grid-area: titleNotas;
-}
-
-.enlaceNotas {
+.link-notas {
   grid-area: enlaceNotas;
-}
-.enlaceNotas a {
   font-size: 16px;
   line-height: 20px;
   color: #219ED3;
   text-align: right;
 }
 
-.cardNotas {
+.box-notas {
   grid-area: cardNotas;
 }
 
@@ -371,7 +352,7 @@ footer {
   text-align: center;
 }
 
-.contenedorFooter {
+.box-footer {
   display: grid;
   grid-template-areas: "footerLinks footerAddress";
   grid-template-columns: 50% 50%;
@@ -380,22 +361,22 @@ footer {
   margin-top: 0px;
   margin-left: 10%;
 }
-.contenedorFooter a {
+.box-footer a {
   margin-top: 8px;
 }
-.contenedorFooter p {
+.box-footer p {
   margin: 0px;
   font-size: 16px;
 }
-.contenedorFooter img {
+.box-footer img {
   margin-right: 16px;
   height: 18px;
 }
-.contenedorFooter .bold {
+.box-footer .bold {
   margin-top: 8px;
 }
 
-.footerLinks {
+.footer__shortcuts {
   display: flex;
   flex-direction: column;
   grid-area: footerLinks;
@@ -412,24 +393,49 @@ footer {
   margin: 0 8px auto;
 }
 
-.linkMapa {
-  color: #219ED3;
-}
-
 .address {
   display: flex;
   align-items: baseline;
 }
 
-.footerAddress {
+.footer__location {
   display: flex;
   flex-direction: column;
   grid-area: footerAddress;
 }
+.footer__location a {
+  color: #219ED3;
+}
 
-/* Páginas secundaria - NOSOTROS, EQUIPO y NOTAS*/
+/* Páginas secundaria */
+.textoDestacado {
+  margin: 24px 10% 28px;
+  font-size: 24px;
+}
+
+.section-us h2, .section-us h3 {
+  margin-left: 0;
+}
+
+.section-team h2 {
+  margin-left: 0;
+}
+
+.textoGris {
+  color: #8F8D92;
+}
+
+/* - NOSOTROS, EQUIPO y NOTAS*/
+.row {
+  margin: 0;
+}
+
+.mg-left h2, .mg-left p {
+  margin-left: 24px;
+}
+
 .cardHorizontal {
-  width: 80%;
+  width: 100%;
   box-shadow: 2px 2px 10px 1px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   margin: 0 auto 24px;
@@ -440,34 +446,11 @@ footer {
   text-align: justify;
 }
 
-.textoDestacado {
-  margin: 24px 10% 12px;
-}
-
 .imgExtra {
   max-width: 100%;
   height: auto;
   margin: auto 0px;
-}
-
-.contenido {
-  width: 80%;
-}
-
-.justificado {
-  text-align: justify;
-}
-
-.bloque {
-  padding-bottom: 32px;
-}
-
-.textoGris {
-  color: #8F8D92;
-}
-
-.textoDestacado {
-  font-size: 24px;
+  padding: 16px 0px;
 }
 
 .btnContactar {
@@ -616,6 +599,7 @@ select {
   padding: 8px 16px;
   padding: 7px 14px;
   width: 100%;
+  color: #656B6C;
 }
 
 label {
@@ -635,16 +619,57 @@ label {
 }
 
 /* Página terciaria - NOTA INDIVIDUAL */
-.fondoBlanco p {
+.container_white p {
   line-height: 24px;
 }
 
 .btnListado {
   width: 280px;
-  margin: 0px auto;
+  margin: 8px auto;
 }
 
 /* MEDIA QUERIES */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .section-intro h1 {
+    font-size: 44px;
+  }
+  .section-intro p, .section-intro a {
+    font-size: 30px;
+    line-height: 32px;
+  }
+}
+@media (min-width: 992px) {
+  .box-equipo::-webkit-scrollbar {
+    height: 10px;
+    border-radius: 5px;
+    background-color: #FFFFFF;
+  }
+  .box-equipo::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    -webkit-box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.2);
+    background-color: #F5F5F5;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .titulo-home {
+    font-size: 40px;
+  }
+}
+@media (min-width: 576px) and (max-width: 767px) {
+  h2 {
+    font-size: 32px;
+  }
+  .section-intro h1 {
+    font-size: 36px;
+  }
+  .section-intro p, .section-intro a {
+    font-size: 28px;
+    line-height: 40px;
+  }
+  .direccion p {
+    font-size: 20px;
+  }
+}
 @media (max-width: 991px) {
   .navbar-collapse {
     background-color: #E9E9E9;
@@ -664,7 +689,7 @@ label {
   .navbar-toggler {
     margin-right: 3%;
   }
-  .contactoHeader {
+  .navbar__button-contact {
     border-top-left-radius: 0px;
     border-top-right-radius: 0px;
   }
@@ -672,7 +697,7 @@ label {
     height: 45px;
     margin-left: 10%;
   }
-  .contenedorMapa {
+  .box-map {
     display: grid;
     grid-template-areas: "direccion" "mapa" "btnMapa";
     grid-template-rows: auto;
@@ -681,43 +706,12 @@ label {
   .direccion p {
     margin: 2% 0%;
   }
-  .btnMapa {
+  .btn-mapa {
     margin: 24px auto;
   }
   .ancla {
     top: -55px;
   }
-}
-@media (min-width: 992px) and (max-width: 1199px) {
-  h1.index {
-    font-size: 44px;
-  }
-  .introContacto {
-    font-size: 30px;
-    line-height: 32px;
-  }
-}
-@media (min-width: 768px) and (max-width: 991px) {
-  h1.index {
-    font-size: 40px;
-  }
-}
-@media (min-width: 576px) and (max-width: 767px) {
-  h1.index {
-    font-size: 36px;
-  }
-  h2 {
-    font-size: 32px;
-  }
-  .introContacto {
-    font-size: 28px;
-    line-height: 40px;
-  }
-  .direccion p {
-    font-size: 20px;
-  }
-}
-@media (max-width: 991px) {
   .cardInfo {
     display: grid;
     grid-template-areas: "subtitulo" "titulo" "botonera" "infoProf" "fotoProf";
@@ -726,14 +720,11 @@ label {
   }
   .cardInfo p,
   .cardInfo ul {
-    text-align: justify;
+    text-align: left;
     margin-right: 24px;
   }
   .cardInfo img {
     width: 80%;
-  }
-  .cardHorizontal {
-    width: 90%;
   }
   .cardInfoNota {
     display: grid;
@@ -743,23 +734,32 @@ label {
   .cardInfoNota p {
     margin-right: 24px;
   }
+  .cardFotoNota img {
+    border-end-end-radius: 0;
+  }
   .datos {
     display: grid;
     grid-template-areas: "especialista" "nombre" "email" "telefono";
-    grid-template-columns: 80%;
+    grid-template-columns: 100%;
     justify-content: center;
+  }
+  .formContacto {
+    width: 82%;
+  }
+  select, input, textarea {
+    font-size: 14px;
   }
 }
 @media (max-width: 767px) {
-  .contenedorFooter {
+  .box-footer {
     display: grid;
     grid-template-areas: "footerLinks" "footerAddress";
     grid-template-rows: auto;
     grid-template-columns: 100%;
     margin-left: 4%;
   }
-  .footerAddress,
-  .footerLinks,
+  .footer__location,
+  .footer__shortcuts,
   .sign {
     margin-top: 18px;
   }
@@ -780,16 +780,35 @@ label {
   }
 }
 @media (max-width: 575px) {
-  .introContacto {
+  .section-intro h1 {
+    font-size: 30px;
+  }
+  .section-intro p, .section-intro a {
     font-size: 24px;
     line-height: 30px;
   }
-  h1.index,
+  .box-intro div p {
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
   h2,
-  h1.secundario {
+  h1.title-sec {
     font-size: 30px;
   }
-  .contenedorCard {
+  .container_white {
+    padding: 16px 0 32px;
+  }
+  .container_white h2, .container_white p {
+    margin: 3% 5% 1%;
+    width: 90%;
+  }
+  .section-team h2 {
+    margin-bottom: 24px;
+  }
+  .row {
+    padding: 0;
+  }
+  .container-cards {
     margin-left: -12%;
     margin-right: 50px;
     width: 100vw;
@@ -797,7 +816,10 @@ label {
   .card {
     margin-left: 12px;
   }
-  .titleSection h2 {
+  .cardHorizontal {
+    width: 90%;
+  }
+  .home-section h2 {
     width: 100vw;
     margin-top: 24px;
     text-align: center;
@@ -812,12 +834,12 @@ label {
     grid-template-columns: 75% 25%;
     grid-template-rows: auto;
   }
-  .notas .contenedorCard {
+  .notas .container-cards {
     margin-bottom: 0%;
   }
-  .enlaceNotas {
+  .link-notas {
     margin-bottom: 52px;
-    margin-top: 8px;
+    margin-top: 12px;
   }
   main {
     top: 60px;

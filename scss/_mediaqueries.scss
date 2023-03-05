@@ -1,5 +1,70 @@
 /* MEDIA QUERIES */
 
+// X-LARGE devices to LARGE devices (desktops, 992px to 1199px)
+@media (min-width:992px) and (max-width:1199px) {
+    .section-intro{
+        h1 {
+            font-size: 44px;
+        }
+
+        p, a {
+            font-size: 30px;
+            line-height: 32px;
+        }
+    }
+
+}
+
+// LARGE devices (desktops, 992px and up)
+@media (min-width:992px) {
+    .box-equipo {
+        &::-webkit-scrollbar {
+            height: 10px;
+            border-radius: 5px;
+            background-color: $background-color_claro;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            border-radius: 5px;
+            -webkit-box-shadow: inset 0 0 4px rgb(0 0 0 / 20%);
+            background-color: $background-color_principal;
+        }
+    }
+}
+
+// MEDIUM devices to LARGE devices (tablets, 768px to 991px)
+@media (min-width:768px) and (max-width:991px) {
+    .titulo-home {
+        font-size: 40px;
+    }
+}
+
+// SMALL devices to MEDIUM devices (landscape phones, 576px to 767px)
+@media (min-width:576px) and (max-width:767px) {
+
+    h2 {
+        font-size: 32px;
+    }
+
+    .section-intro{
+        h1 {
+            font-size: 36px;
+        }
+
+        p, a {
+            font-size: 28px;
+            line-height: 40px;
+        }
+    }
+
+    .direccion {
+        p {
+            font-size: 20px;
+        }
+    }
+}
+
+// Hasta LARGE devices (991px and down)
 @media (max-width:991px) {
     .navbar-collapse {
         background-color: $background-color_navbar;
@@ -24,7 +89,7 @@
         margin-right: 3%;
     }
 
-    .contactoHeader {
+    .navbar__button-contact {
         border-top-left-radius: 0px;
         border-top-right-radius: 0px;
     }
@@ -34,7 +99,7 @@
         margin-left: 10%;
     }
 
-    .contenedorMapa {
+    .box-map {
         display: grid;
         grid-template-areas:
             "direccion"
@@ -50,54 +115,13 @@
         }
     }
 
-    .btnMapa {
+    .btn-mapa {
         margin: 24px auto;
     }
 
     .ancla {
         top: -55px;
     }
-}
-
-@media (min-width:992px) and (max-width:1199px) {
-    h1.index {
-        font-size: 44px;
-    }
-
-    .introContacto {
-        font-size: 30px;
-        line-height: 32px;
-    }
-}
-
-@media (min-width:768px) and (max-width:991px) {
-    h1.index {
-        font-size: 40px;
-    }
-}
-
-@media (min-width:576px) and (max-width:767px) {
-    h1.index {
-        font-size: 36px;
-    }
-
-    h2 {
-        font-size: 32px;
-    }
-
-    .introContacto {
-        font-size: 28px;
-        line-height: 40px;
-    }
-
-    .direccion {
-        p {
-            font-size: 20px;
-        }
-    }
-}
-
-@media (max-width:991px) {
 
     .cardInfo {
         display: grid;
@@ -112,17 +136,13 @@
 
         p,
         ul {
-            text-align: justify;
+            text-align: left;
             margin-right: 24px;
         }
 
         img {
             width: 80%;
         }
-    }
-
-    .cardHorizontal {
-        width: 90%;
     }
 
     .cardInfoNota {
@@ -140,6 +160,12 @@
         }
     }
 
+    .cardFotoNota{
+        img {
+            border-end-end-radius: 0;
+        }
+    }
+
     .datos {
         display: grid;
         grid-template-areas:
@@ -147,13 +173,22 @@
             "nombre"
             "email"
             "telefono";
-        grid-template-columns: 80%;
+        grid-template-columns: 100%;
         justify-content: center;
     }
-}
 
+    .formContacto {
+        width: 82%;
+    }
+
+    select, input, textarea {
+        font-size: 14px;
+    }
+}   
+
+// Hasta MEDIUM devices (less than 767px)
 @media (max-width:767px) {
-    .contenedorFooter {
+    .box-footer {
         display: grid;
         grid-template-areas:
             "footerLinks"
@@ -163,8 +198,8 @@
         margin-left: 4%;
     }
 
-    .footerAddress,
-    .footerLinks,
+    .footer__location,
+    .footer__shortcuts,
     .sign {
         margin-top: 18px;
     }
@@ -189,19 +224,53 @@
     }
 }
 
+// X-SMALL devices (portrait phones, less than 576px)
 @media (max-width:575px) {
-    .introContacto {
-        font-size: 24px;
-        line-height: 30px;
+
+    .section-intro{
+        h1 {
+            font-size: 30px;
+        }
+
+        p, a {
+            font-size: 24px;
+            line-height: 30px;
+        }
     }
 
-    h1.index,
+    .box-intro {
+        div{
+            p {
+                padding-top: 12px;
+                padding-bottom: 12px;
+            }
+        }
+    }
+
     h2,
-    h1.secundario {
+    h1.title-sec {
         font-size: 30px;
     }
 
-    .contenedorCard {
+    .container_white {
+        padding: 16px 0 32px;
+        h2, p {
+            margin: 3% 5% 1%;
+            width: 90%;
+        }
+    }
+
+    .section-team {
+        h2 {
+            margin-bottom: 24px;
+        }
+    }
+
+    .row {
+        padding: 0;
+    }
+
+    .container-cards {
         margin-left: -12%;
         margin-right: 50px;
         width: 100vw;
@@ -211,7 +280,11 @@
         margin-left: 12px;
     }
 
-    .titleSection {
+    .cardHorizontal {
+        width: 90%;
+    }
+
+    .home-section {
         h2 {
             width: 100vw;
             margin-top: 24px;
@@ -235,14 +308,14 @@
         grid-template-columns: 75% 25%;
         grid-template-rows: auto;
 
-        .contenedorCard {
+        .container-cards {
             margin-bottom: 0%;
         }
     }
 
-    .enlaceNotas {
+    .link-notas {
         margin-bottom: 52px;
-        margin-top: 8px;
+        margin-top: 12px;
     }
 
     main {

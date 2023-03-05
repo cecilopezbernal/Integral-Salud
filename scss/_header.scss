@@ -2,7 +2,7 @@
 
 .header {
     position: fixed;
-    background: #F5F5F5;
+    background: $background-color_principal;
     width: 100vw;
     z-index: 10;
 }
@@ -11,54 +11,55 @@
 
 nav {
     margin-top: 50px;
-    color: #1F1F1F;
-    background: #F5F5F5;
+    color: $color_link-standard;
+    background: $background-color_principal;
     z-index: 10;
+
+    ul {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: space-around;
+        width: 57%;
+
+        a:hover {
+            padding-bottom: calc(var(--bs-nav-link-padding-x) - 2px);
+            border-bottom: $color_link-standard solid 2px;
+            transition: all 0.1s ease;
+        }
+    }
+
+    li {
+        list-style-type: none;
+        font-style: normal;
+        font-size: 16px;
+    }
 }
 
+// todos los enlaces de la web
 a {
     text-decoration: none;
-    color: #1F1F1F;
+    color: $color_link-standard;
 }
 
-nav ul a:hover {
-    padding-bottom: calc(var(--bs-nav-link-padding-x) - 2px);
-    border-bottom: #1F1F1F solid 2px;
-    transition: all 0.1s ease;
-}
-
-nav li {
-    list-style-type: none;
-    font-style: normal;
-    font-size: 16px;
-}
-
-nav ul {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: space-around;
-    width: 57%;
-}
-
-.contactoHeader {
+.navbar__button-contact {
     text-transform: uppercase;
     display: flex;
     padding: 8px 32px 8px 18px;
-    background-color: #1F1F1F;
-    color: #FFFFFF;
+    background-color: $color_link-standard;
+    color: $background-color_claro;
     border-radius: 10px;
     flex-direction: row;
     transition: all 0.3s ease;
+
+    &:hover {
+        background-color: $background-color_button-hover;
+    }
 }
 
-.phoneHeader-white {
+.icon-phone_white {
     height: 18px;
     margin: auto 8px;
-}
-
-.contactoHeader:hover {
-    background-color: #5A5A5A;
 }
 
 .navbar-toggler {

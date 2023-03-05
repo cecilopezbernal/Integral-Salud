@@ -10,24 +10,24 @@
     display: block;
     transition: all 0.3s ease;
 
+    &:hover {
+        background-color: #417139;
+        color: #FFFFFF;
+    }
+
 }
 
-.btnBig {
+.btn_big {
     font-size: 22px;
     line-height: 40px;
     width: 240px;
 }
 
-.btnLittle {
+.btn_little {
     position: absolute;
     right: 24px;
     bottom: 16px;
     font-size: 16px;
     line-height: 26px;
     width: 150px;
-}
-
-.btn:hover {
-    background-color: #417139;
-    color: #FFFFFF;
 }

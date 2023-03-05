@@ -1,0 +1,81 @@
+/* Secciones HOME */
+
+.home-section {
+    h2 {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: baseline;
+        grid-area: titleNotas;
+    }
+}
+
+/* UBICACIÓN - Sección 3 Home */
+
+.box-map {
+    display: grid;
+    grid-template-areas: "mapa direccion" "mapa btnMapa";
+    grid-template-rows: 50% 50%;
+    grid-template-columns: 50% 45%;
+    grid-column-gap: 5%;
+
+    iframe {
+        width: 100%;
+        height: 440px;
+        grid-area: mapa;
+    }
+}
+
+.direccion {
+    grid-area: direccion;
+    margin: 5% 5%;
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+
+    p {
+        margin: 4% 0%;
+        font-size: 24px;
+    }
+
+    img {
+        height: 24px;
+        margin-right: 10px;
+    }
+}
+
+.bold {
+    font-weight: 600;
+}
+
+.btn-mapa {
+    margin: 57px auto;
+    grid-area: btnMapa;
+    max-height: 52px;
+}
+
+.ancla {
+    position: relative;
+    top: -135px;
+}
+
+/* NOTAS - Sección 4 Home */
+
+.notas {
+    display: grid;
+    grid-template-areas: "titleNotas enlaceNotas" "cardNotas cardNotas";
+    grid-template-columns: 85% 15%;
+    align-items: baseline;
+}
+
+.link-notas {
+    grid-area: enlaceNotas;
+    font-size: 16px;
+    line-height: 20px;
+    color: $color_link;
+    text-align: right;
+}
+
+.box-notas {
+    grid-area: cardNotas;
+}

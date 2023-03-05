@@ -7,7 +7,8 @@ footer {
 	background-color: $background-color_footer;
 	text-align: center;
 }
-.contenedorFooter {
+
+.box-footer {
 	display: grid;
 	grid-template-areas: "footerLinks footerAddress";
 	grid-template-columns: 50% 50%;
@@ -15,45 +16,55 @@ footer {
 	text-align: left;
 	margin-top: 0px;
 	margin-left: 10%;
+
 	a {
 		margin-top: 8px;
 	}
+
 	p {
 		margin: 0px;
 		font-size: 16px;
 	}
+
 	img {
 		margin-right: 16px;
 		height: 18px;
 	}
+	
 	.bold {
 		margin-top: 8px;
 	}
 }
-.footerLinks {
+
+.footer__shortcuts {
 	display: flex;
 	flex-direction: column;
 	grid-area: footerLinks;
 }
+
 .sign {
 	display: flex;
 	font-size: 14px;
 	color: $color_firma;
 	justify-content: center;
 	margin-top: 2%;
+
 	img {
 		margin: 0 8px auto;
 	}
 }
-.linkMapa {
-	color: $color_link;
-}
+
 .address {
 	display: flex;
 	align-items: baseline;
 }
-.footerAddress {
+
+.footer__location {
 	display: flex;
 	flex-direction: column;
 	grid-area: footerAddress;
+
+	a {
+		color: $color_link;
+	}
 }
