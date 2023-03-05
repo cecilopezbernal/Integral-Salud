@@ -124,7 +124,7 @@ h2 {
   margin-bottom: 12px;
 }
 
-h2.pagTerciaria {
+.pagTerciaria h2 {
   margin: 8px auto;
 }
 
@@ -426,10 +426,6 @@ footer {
 }
 
 /* - NOSOTROS, EQUIPO y NOTAS*/
-.row {
-  margin: 0;
-}
-
 .mg-left h2, .mg-left p {
   margin-left: 24px;
 }
@@ -713,6 +709,9 @@ label {
   .ancla {
     top: -55px;
   }
+  .mg-left h2, .mg-left p {
+    margin-left: 0;
+  }
   .cardInfo {
     display: grid;
     grid-template-areas: "subtitulo" "titulo" "botonera" "infoProf" "fotoProf";
@@ -734,6 +733,9 @@ label {
   }
   .cardInfoNota p {
     margin-right: 24px;
+  }
+  .cardInfoNota .botonera {
+    justify-content: space-around;
   }
   .cardFotoNota img {
     border-end-end-radius: 0;
@@ -808,9 +810,6 @@ label {
   }
   .section-team h2 {
     margin-bottom: 24px;
-  }
-  .row {
-    padding: 0;
   }
   .container-cards {
     margin-left: -12%;

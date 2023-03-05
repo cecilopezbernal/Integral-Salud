@@ -12,7 +12,6 @@
             line-height: 32px;
         }
     }
-
 }
 
 // LARGE devices (desktops, 992px and up)
@@ -124,6 +123,12 @@
         top: -55px;
     }
 
+    .mg-left {
+        h2, p {
+            margin-left: 0;
+        }
+    }
+
     .cardInfo {
         display: grid;
         grid-template-areas:
@@ -144,6 +149,7 @@
         img {
             width: 80%;
         }
+        
     }
 
     .cardInfoNota {
@@ -158,6 +164,10 @@
 
         p {
             margin-right: 24px;
+        }
+
+        .botonera {
+            justify-content: space-around;
         }
     }
 
@@ -269,10 +279,6 @@
         h2 {
             margin-bottom: 24px;
         }
-    }
-
-    .row {
-        padding: 0;
     }
 
     .container-cards {
